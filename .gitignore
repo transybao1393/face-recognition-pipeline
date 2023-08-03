@@ -162,6 +162,7 @@ cython_debug/
 **/mtcnn/models
 preview
 **/mtcnn/training_data
+**/video
 
 
 # Ignore all images
