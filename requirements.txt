@@ -1,0 +1,13 @@
+numpy
+matplotlib
+keras
+tensorflow==2.13.0
+pillow
+tensorflow-hub==0.14.0
+scikit-learn
+opencv-python
+h5py
+requests
+psutil
+imageio
+imutils==0.5.4
