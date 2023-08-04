@@ -27,3 +27,6 @@ Please follow instruction in Makefile
 - Cython / Rust migration
 - Improve speed and accuracy when multiple model recognition
 - Image Ingestion layer to improve caching and data serving
+
+## License
+This project is licensed under the [BSD-3-Clause](https://gist.github.com/nicolasdao/a7adda51f2f185e8d2700e1573d8a633#the-bsd-license-case) License - see the [LICENSE.md](LICENSE.md) file for details
