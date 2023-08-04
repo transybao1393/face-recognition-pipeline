@@ -230,3 +230,6 @@ preview
 # 3D Images
 *.3dm
 *.max
+
+# DS_Store
+.DS_Store
