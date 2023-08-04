@@ -7,13 +7,18 @@ With just only 1 image for input, you will have a model with realtime running an
 
 ![Face recognition pipeline](resources/face-recognition-pipeline.png)
 
+## Installation steps
+1. git clone https://github.com/transybao1393/face-recognition-pipeline .
+2. Follow __Before doing anything__ part
+3. Running steps
+
 ## Before doing anything
 1. Download and create models to __mtcnn/models__ folder from URL https://drive.google.com/file/d/1TTdqNEqYjWTTMYGxm8IT6t41mRef-5Yu/view?usp=sharing
 2. Create folder __mtcnn/training_data/processed__ and __mtcnn/training_data/raw__
 3. Create folder __/preview__
 4. Create folder __/video__
 
-## Installation steps
+## Running steps
 Please follow instruction in Makefile
 
 ## Next steps
