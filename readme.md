@@ -1,11 +1,24 @@
-### Face Recognition Pipeline
-Description: Pipeline for face recognition pipeline. From 1 image to recognition.
+# Face Recognition Pipeline
+From *1 image* to edge face recognition.
+
+### Why this pipeline shine?
+Imagine you have limited resources, you want a realtime solution to server face recognition model for specific person. This pipeline will have you to achive that goal with speed and accuracy.
+With just only 1 image for input, you will have a model with realtime running and ready to server in edge devices (cameras, mobile phone,...)
+
+![Face recognition pipeline](resources/face-recognition-pipeline.png)
 
 ## Before doing anything
-1. Download and create models to mtcnn/models folder from URL https://drive.google.com/file/d/1TTdqNEqYjWTTMYGxm8IT6t41mRef-5Yu/view?usp=sharing
-2. Create folder mtcnn/training_data/processed and mtcnn/training_data/raw
-3. Create folder /preview
-4. Create folder /video
+1. Download and create models to __mtcnn/models__ folder from URL https://drive.google.com/file/d/1TTdqNEqYjWTTMYGxm8IT6t41mRef-5Yu/view?usp=sharing
+2. Create folder __mtcnn/training_data/processed__ and __mtcnn/training_data/raw__
+3. Create folder __/preview__
+4. Create folder __/video__
 
 ## Installation steps
-Follow instruction in Makefile
+Please follow instruction in Makefile
+
+## Next steps
+- Multi processing and even better multithreading implementation for better memory and CPU usage.
+- Python generator pipeline to optimize memory managment.
+- Cython / Rust migration
+- Improve speed and accuracy when multiple model recognition
+- Image Ingestion layer to improve caching and data serving
