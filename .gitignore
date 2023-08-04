@@ -198,6 +198,7 @@ preview
 
 # Portable Network Graphics
 *.png
+!resources/face-recognition-pipeline.png
 
 # Animated Portable Network Graphics
 *.apng
