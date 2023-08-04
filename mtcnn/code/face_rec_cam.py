@@ -78,11 +78,11 @@ def main():
             people_detected = set()
             person_detected = collections.Counter()
 
-            # macbook webcam
+            # webcam
             # cap  = VideoStream(src=0).start()
 
             # camera rtsp stream
-            rtsp_url = "rtsp://transybao:transybao93@192.168.68.148:554/stream1"
+            rtsp_url = "rtsp://<username>:<password>@<ip address>:<camera public port>/<camera channel>"
             cap  = VideoStream(rtsp_url).start()
             
 
