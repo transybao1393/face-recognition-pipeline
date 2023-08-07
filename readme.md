@@ -1,9 +1,10 @@
 # Face Recognition Pipeline
+Series: *One step to SOTA*
 From *1 image* to edge face recognition.
 
 ### Why this pipeline shine?
-Imagine you have limited resources, you want a realtime solution to server face recognition model for specific person. This pipeline will have you to achive that goal with speed and accuracy.
-With just only 1 image for input, you will have a model with realtime running and ready to server in edge devices (cameras, mobile phone,...)
+Imagine you have limited resources, you want a realtime solution to serve face recognition model for specific person. This pipeline will have you to achieve that goal with speed and accuracy.
+With just only 1 image for input, you will have a model with realtime running and ready to be served in edge devices (cameras, mobile phone,...)
 
 ![Face recognition pipeline](resources/face-recognition-pipeline.png)
 
@@ -28,7 +29,7 @@ Please follow instruction in Makefile
 - Improve speed and accuracy when multiple model recognition
 - Image Ingestion layer to improve caching and data serving
 
-## Support to my work
+## Support me
 [!["Buy Me A Coffee"](https://www.buymeacoffee.com/assets/img/custom_images/orange_img.png)](https://www.buymeacoffee.com/transybao)
 
 ## License

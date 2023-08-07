@@ -60,22 +60,15 @@ def main():
             print('Loading feature extraction model')
             facenet.load_model(FACENET_MODEL_PATH)
 
-            # tensorflow v1
-            # Get input and output tensors
-            # images_placeholder = tf.get_default_graph().get_tensor_by_name("input:0")
-            # embeddings = tf.get_default_graph().get_tensor_by_name("embeddings:0")
-            # phase_train_placeholder = tf.get_default_graph().get_tensor_by_name("phase_train:0")
-
             # tensorflow v2
             images_placeholder = tf.compat.v1.get_default_graph().get_tensor_by_name("input:0")
             embeddings = tf.compat.v1.get_default_graph().get_tensor_by_name("embeddings:0")
             phase_train_placeholder = tf.compat.v1.get_default_graph().get_tensor_by_name("phase_train:0")
             
             embedding_size = embeddings.get_shape()[1]
+            people_detected = set()
 
             pnet, rnet, onet = align.detect_face.create_mtcnn(sess, "mtcnn/code/align")
-
-            people_detected = set()
             person_detected = collections.Counter()
 
             # webcam
@@ -85,7 +78,6 @@ def main():
             rtsp_url = "rtsp://<username>:<password>@<ip address>:<camera public port>/<camera channel>"
             cap  = VideoStream(rtsp_url).start()
             
-
             while (True):
                 frame = cap.read()
                 frame = imutils.resize(frame, width=600)
@@ -95,10 +87,8 @@ def main():
 
                 faces_found = bounding_boxes.shape[0]
                 try:
-                    # if faces_found > 1:
-                    #     cv2.putText(frame, "Only one face", (0, 100), cv2.FONT_HERSHEY_COMPLEX_SMALL,
-                    #                 1, (255, 255, 255), thickness=1, lineType=2)
-                    if faces_found > 0 and faces_found < 2:
+                    print(">>> FACE FOUND", faces_found)
+                    if faces_found > 0:
                         det = bounding_boxes[:, 0:4]
                         bb = np.zeros((faces_found, 4), dtype=np.int32)
                         for i in range(faces_found):
@@ -127,8 +117,8 @@ def main():
                                 best_name = class_names[best_class_indices[0]]
                                 print("Name: {}, Probability: {}".format(best_name, best_class_probabilities))
 
-                                # if probability > 0.8, show the name
-                                if best_class_probabilities > 0.8:
+                                # if probability > 0.5, show the name
+                                if best_class_probabilities > 0.5:
                                     cv2.rectangle(frame, (bb[i][0], bb[i][1]), (bb[i][2], bb[i][3]), (0, 255, 0), 2)
                                     text_x = bb[i][0]
                                     text_y = bb[i][3] + 20
