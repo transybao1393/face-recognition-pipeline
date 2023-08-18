@@ -78,6 +78,9 @@ def main():
             rtsp_url = "rtsp://<username>:<password>@<ip address>:<camera public port>/<camera channel>"
             cap  = VideoStream(rtsp_url).start()
             
+            # TODO: If face found > 0 and probabilities > 0.5, log to redis for every 2 seconds
+            # TODO: Making report from log data to csv file at one time per day using scheduler
+            # TODO: Write machinism to clean up the redis data every day
             while (True):
                 frame = cap.read()
                 frame = imutils.resize(frame, width=600)

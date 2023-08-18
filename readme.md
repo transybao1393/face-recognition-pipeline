@@ -1,5 +1,6 @@
 # Face Recognition Pipeline
 Series: *One step to SOTA*
+
 From *1 image* to edge face recognition.
 
 ### Why this pipeline shine?

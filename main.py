@@ -12,7 +12,7 @@ def main(args):
     # FIXME: Applying pipeline
     # FIXME: Building cache to serve resume current process if any occurs
     # FIXME: Applying progress bar
-    # FIXME: Applying error management (using redis? perhaps or cache by RUST)
+    # FIXME: Applying error management
     # TODO: Applying image face alignment (Pitch, Yall, Roll)
     
     # Pipeline goal: input: 1 image, output: detection on webcam
